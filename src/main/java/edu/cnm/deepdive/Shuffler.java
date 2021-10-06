@@ -10,7 +10,8 @@ public class Shuffler {
     public Shuffler(Random rng) {
         this.rng = rng;
     }
-// int []
+
+    // int []
     public void shuffle(int[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -19,14 +20,18 @@ public class Shuffler {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-// double []
-    public void shuffle(double[] data) {shufflePart(data, data.length - 1);}
+
+    // double []
+    public void shuffle(double[] data) {
+        shufflePart(data, data.length - 1);
+    }
 
     public double[] shuffle(double[] data, int drawSize) {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-// boolean []
+
+    // boolean []
     public void shuffle(boolean[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -35,7 +40,8 @@ public class Shuffler {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-// byte []
+
+    // byte []
     public void shuffle(byte[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -44,7 +50,8 @@ public class Shuffler {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-//char []
+
+    //char []
     public void shuffle(char[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -53,7 +60,8 @@ public class Shuffler {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-//short []
+
+    //short []
     public void shuffle(short[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -62,7 +70,8 @@ public class Shuffler {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-// long []
+
+    // long []
     public void shuffle(long[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -71,7 +80,8 @@ public class Shuffler {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-// float []
+
+    // float []
     public void shuffle(float[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -80,7 +90,8 @@ public class Shuffler {
         shufflePart(data, drawSize);
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
-// Object []
+
+    // Object []
     public void shuffle(Object[] data) {
         shufflePart(data, data.length - 1);
     }
@@ -90,9 +101,7 @@ public class Shuffler {
         return Arrays.copyOfRange(data, data.length - drawSize, data.length);
     }
 
-    // TODO  Create overloads of shufflePart for boolean[], byte[], char[], short[], long[], float[], Object[].
-
-// int []
+    // int []
     private void shufflePart(int[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -103,7 +112,8 @@ public class Shuffler {
             }
         }
     }
-// double []
+
+    // double []
     private void shufflePart(double[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -114,7 +124,8 @@ public class Shuffler {
             }
         }
     }
-// boolean []
+
+    // boolean []
     private void shufflePart(boolean[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -125,7 +136,8 @@ public class Shuffler {
             }
         }
     }
-// byte []
+
+    // byte []
     private void shufflePart(byte[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -136,7 +148,8 @@ public class Shuffler {
             }
         }
     }
-// char []
+
+    // char []
     private void shufflePart(char[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -147,7 +160,8 @@ public class Shuffler {
             }
         }
     }
-// short []
+
+    // short []
     private void shufflePart(short[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -158,7 +172,8 @@ public class Shuffler {
             }
         }
     }
-// long []
+
+    // long []
     private void shufflePart(long[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -169,7 +184,8 @@ public class Shuffler {
             }
         }
     }
-// float []
+
+    // float []
     private void shufflePart(float[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -180,7 +196,8 @@ public class Shuffler {
             }
         }
     }
-// Object[]
+
+    // Object[]
     private void shufflePart(Object[] data, int drawSize) {
         for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
             int destIndex = rng.nextInt(sourceIndex + 1);
@@ -191,6 +208,4 @@ public class Shuffler {
             }
         }
     }
-
-    // TODO  Create overloads of shufflePart for boolean[], byte[], char[], short[], long[], float[], Object[].
 }
